@@ -2,8 +2,9 @@ package com.CarDoc.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.CarDoc.beans.User;
+import com.CarDoc.beans.Car;
 
-public interface UserDao extends JpaRepository<User, Long> {
+public interface CarDao extends JpaRepository<Car, Long>
+{
 
 }
