@@ -14,11 +14,16 @@ public class ServServiceImpl implements ServService
 {
 	@Autowired
 	ServDao servDao;
+
+	@Override
+	public void addnewService(Serv s) 
+	{
+		servDao.save(s);
+	}
 	
 	@Override
 	public List<Serv> getAllServices() 
 	{
 		return servDao.findAll();
 	}
-	
 }

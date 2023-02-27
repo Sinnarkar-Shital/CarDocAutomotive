@@ -21,20 +21,20 @@ public class Employee extends User
 	private double salary;
 	private Date hireDate;
 	private String designation;
-	@OneToMany(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
-	@JoinColumn(name="sId")
-	private List<Serv> services;
+//	@OneToMany(mappedBy="e",cascade = CascadeType.ALL,fetch=FetchType.LAZY)
+//	@JoinColumn(name="sId")
+//	private List<Serv> services;
 	
 	public Employee() {
 		super();
 	}
 
-	public Employee(String pwd,String fName,String lName,String phoneNo,String email, double salary, Date hireDate, String designation, List<Serv> services) {
+	public Employee(String pwd,String fName,String lName,String phoneNo,String email, double salary, Date hireDate, String designation) {
 		super(pwd,fName,lName,phoneNo,email);
 		this.salary = salary;
 		this.hireDate = hireDate;
 		this.designation = designation;
-		this.services = services;
+		//this.services = services;
 	}
 
 	public double getSalary() {
@@ -61,18 +61,17 @@ public class Employee extends User
 		this.designation = designation;
 	}
 
-	public List<Serv> getServices() {
-		return services;
-	}
-
-	public void setServices(List<Serv> services) {
-		this.services = services;
-	}
+//	public List<Serv> getServices() {
+//		return services;
+//	}
+//
+//	public void setServices(List<Serv> services) {
+//		this.services = services;
+//	}
 
 	@Override
 	public String toString() {
-		return "Employee [salary=" + salary + ", hireDate=" + hireDate + ", designation=" + designation + ", services="
-				+ services + "]";
+		return "Employee [salary=" + salary + ", hireDate=" + hireDate + ", designation=" + designation + "]";
 	}
 	
 }

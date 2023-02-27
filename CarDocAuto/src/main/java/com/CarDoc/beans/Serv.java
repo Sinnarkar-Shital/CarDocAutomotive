@@ -9,8 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+
 
 @Entity
 public class Serv
@@ -20,7 +20,7 @@ public class Serv
 	private long sId;
 	private String name;
 	private double price;
-	@OneToOne(fetch=FetchType.LAZY,cascade=CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="empId")
 	private Employee e;
 	
@@ -28,7 +28,7 @@ public class Serv
 		super();
 	}
 
-	public Serv(long sId, String name, double price, Employee e) {
+	public Serv(long sId, String name, double price,Employee e) {
 		super();
 		this.sId = sId;
 		this.name = name;
@@ -70,7 +70,7 @@ public class Serv
 
 	@Override
 	public String toString() {
-		return "Service [sId=" + sId + ", name=" + name + ", price=" + price + ", e=" + e + "]";
+		return "Service [sId=" + sId + ", name=" + name + ", price=" + price + ",Employee" + e+"]";
 	}
 
 	
