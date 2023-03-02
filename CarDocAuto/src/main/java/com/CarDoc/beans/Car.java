@@ -1,3 +1,4 @@
+
 package com.CarDoc.beans;
 
 import javax.persistence.CascadeType;
@@ -22,6 +23,7 @@ public class Car
 	private String fuel;
 	private String plateNo;
 	private int mfgYear;
+	
 	
 	public Car() {
 		super();

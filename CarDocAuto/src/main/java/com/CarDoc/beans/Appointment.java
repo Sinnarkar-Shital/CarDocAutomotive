@@ -4,6 +4,7 @@ import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -24,10 +25,10 @@ public class Appointment
 	private Time appTime;
 	private double billAmount;
 	private String status;
-	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
+	@OneToOne
 	@JoinColumn(name="pId")
 	private Payment payment;
-	@ManyToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name="carId")
 	private Car car;
 	

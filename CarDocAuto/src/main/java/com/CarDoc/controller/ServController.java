@@ -45,5 +45,30 @@ public class ServController
 		List<Serv> slist=servService.getAllServices();
 		return ResponseEntity.ok(slist);
 	}
+	
+	@GetMapping("/services/{sId}")
+	public ResponseEntity<Employee> displayById(@PathVariable long sId) {
+		Serv s=servService.getById(sId);
+		if(s!=null) {
+			return new ResponseEntity(s,HttpStatus.OK);
+		}
+		return new ResponseEntity(HttpStatus.NOT_FOUND);
+	}
+	
+	@PutMapping("/services/{sId}")
+	public ResponseEntity<String> updateService(@RequestBody Serv s) {
+		int n=servService.updateService(s);
+		if(n>0)
+		   return new ResponseEntity("Data added successfully"+s.getsId(),HttpStatus.CREATED);
+		else
+		   return new ResponseEntity(HttpStatus.BAD_REQUEST);
+	}
+	
+	@DeleteMapping("/services/{sId}")
+	public ResponseEntity<String> deleteProduct(@PathVariable long sId) {
+		servService.deleteById(sId);
+		return new ResponseEntity("Data deleted successfully-->"+ sId,HttpStatus.OK);
+		
+	}
 
 }

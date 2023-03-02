@@ -16,7 +16,7 @@ import lombok.Data;
 @PrimaryKeyJoinColumn(name="cId")
 public class Customer extends User
 {
-	@OneToMany(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
+	@OneToMany
 	@JoinColumn(name="carId")
 	private List<Car> cars;
 
@@ -42,4 +42,3 @@ public class Customer extends User
 		return "Customer [car=" + cars + "]";
 	}
 }
-

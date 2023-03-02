@@ -11,6 +11,12 @@ public interface ServService
 	List<Serv> getAllServices();
 
 	void addnewService(Serv s);
+
+	Serv getById(long sId);
+
+	int updateService(Serv s);
+
+	void deleteById(long sId);
 	
 
 }

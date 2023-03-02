@@ -1,0 +1,64 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   .metadata/.lock
+#	new file:   .metadata/.log
+#	new file:   .metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.location
+#	new file:   .metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version
+#	new file:   .metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+#	new file:   .metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version
+#	new file:   .metadata/.plugins/org.eclipse.core.resources/.root/2.tree
+#	new file:   .metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+#	new file:   .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs
+#	new file:   .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs
+#	new file:   .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jsch.core.prefs
+#	new file:   .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jst.j2ee.webservice.ui.prefs
+#	new file:   .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs
+#	new file:   .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs
+#	new file:   .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.navigator.prefs
+#	new file:   .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs
+#	new file:   .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs
+#	new file:   .metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+#	new file:   .metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.project
+#	new file:   .metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.settings/org.eclipse.core.resources.prefs
+#	new file:   .metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache
+#	new file:   .metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+#	new file:   .metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt
+#	new file:   .metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+#	new file:   .metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+#	new file:   .metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml
+#	new file:   .metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml
+#	new file:   .metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser
+#	new file:   .metadata/.plugins/org.eclipse.m2e.logback/0.log
+#	new file:   .metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.0.20221015-0744.xml
+#	new file:   .metadata/.plugins/org.eclipse.oomph.setup/workspace.setup
+#	new file:   .metadata/.plugins/org.eclipse.tips.ide/dialog_settings.xml
+#	new file:   .metadata/.plugins/org.eclipse.ui.intro/introstate
+#	new file:   .metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml
+#	new file:   .metadata/version.ini
+#	modified:   CarDocAuto/pom.xml
+#	modified:   CarDocAuto/src/main/java/com/CarDoc/beans/Appointment.java
+#	modified:   CarDocAuto/src/main/java/com/CarDoc/beans/Car.java
+#	modified:   CarDocAuto/src/main/java/com/CarDoc/beans/Customer.java
+#	modified:   CarDocAuto/src/main/java/com/CarDoc/beans/Employee.java
+#	modified:   CarDocAuto/src/main/java/com/CarDoc/beans/Payment.java
+#	new file:   CarDocAuto/src/main/java/com/CarDoc/beans/Serv.java
+#	deleted:    CarDocAuto/src/main/java/com/CarDoc/beans/Service.java
+#	modified:   CarDocAuto/src/main/java/com/CarDoc/beans/User.java
+#	deleted:    CarDocAuto/src/main/java/com/CarDoc/controller/HomeController.java
+#	new file:   CarDocAuto/src/main/java/com/CarDoc/controller/ServController.java
+#	deleted:    CarDocAuto/src/main/java/com/CarDoc/controller/ServiceController.java
+#	new file:   CarDocAuto/src/main/java/com/CarDoc/dao/ServDao.java
+#	deleted:    CarDocAuto/src/main/java/com/CarDoc/dao/ServiceDao.java
+#	new file:   CarDocAuto/src/main/java/com/CarDoc/service/ServService.java
+#	new file:   CarDocAuto/src/main/java/com/CarDoc/service/ServServiceImpl.java
+#	deleted:    CarDocAuto/src/main/java/com/CarDoc/service/ServiceService.java
+#	deleted:    CarDocAuto/src/main/java/com/CarDoc/service/ServiceServiceImpl.java
+#	modified:   CarDocAuto/src/main/resources/application.properties
+#	deleted:    CarDocAuto/src/main/resources/application.properties.backup
+#
