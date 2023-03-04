@@ -21,17 +21,13 @@ public class Car
 	private String fuel;
 	private String plateNo;
 	private int mfgYear;
-	@OneToOne(fetch=FetchType.LAZY,cascade=CascadeType.ALL)
-	@JoinColumn(name="appId")
-	private Appointment app; 
-	
+
 	
 	public Car() {
 		super();
 	}
 
-	public Car(long carId, String brand, String model, String fuel, String plateNo, int mfgYear,
-			Appointment app) {
+	public Car(long carId, String brand, String model, String fuel, String plateNo, int mfgYear) {
 		super();
 		this.carId = carId;
 		this.brand = brand;
@@ -39,15 +35,6 @@ public class Car
 		this.fuel = fuel;
 		this.plateNo = plateNo;
 		this.mfgYear = mfgYear;
-		this.app = app;
-	}
-
-	public Appointment getApp() {
-		return app;
-	}
-
-	public void setApp(Appointment app) {
-		this.app = app;
 	}
 
 	public long getCarId() {
@@ -101,6 +88,6 @@ public class Car
 	@Override
 	public String toString() {
 		return "Car [carId=" + carId + ", brand=" + brand + ", model=" + model + ", fuel=" + fuel + ", plateNo="
-				+ plateNo + ", mfgYear=" + mfgYear + ", customer=" + ", app=" + app + "]";
+				+ plateNo + ", mfgYear=" + mfgYear + ", customer=" + "]";
 	}
 }

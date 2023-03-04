@@ -2,7 +2,9 @@ package com.CarDoc.beans;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,7 +22,7 @@ public class Customer
 	private String lName;
 	private String phoneNo;
 	private String email;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
 	@JoinColumn(name="carId")
 	private List<Car> cars;
 

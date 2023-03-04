@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.CarDoc.beans.Appointment;
-import com.CarDoc.beans.Employee;
 import com.CarDoc.dao.AppointmentDao;
 
 @Service
