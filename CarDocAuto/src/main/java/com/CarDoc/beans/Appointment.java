@@ -3,17 +3,12 @@ package com.CarDoc.beans;
 import java.sql.Time;
 import java.util.Date;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import lombok.Data;
 
 @Entity
 public class Appointment
@@ -28,16 +23,12 @@ public class Appointment
 	@OneToOne
 	@JoinColumn(name="pId")
 	private Payment payment;
-	@ManyToOne
-	@JoinColumn(name="carId")
-	private Car car;
 	
 	public Appointment() {
 		super();
 	}
 
-	public Appointment(long appId, Date appDate, Time appTime, double billAmount, String status, Payment payment,
-			Car car) {
+	public Appointment(long appId, Date appDate, Time appTime, double billAmount, String status, Payment payment) {
 		super();
 		this.appId = appId;
 		this.appDate = appDate;
@@ -45,7 +36,6 @@ public class Appointment
 		this.billAmount = billAmount;
 		this.status = status;
 		this.payment = payment;
-		this.car = car;
 	}
 
 	public long getAppId() {
@@ -96,17 +86,9 @@ public class Appointment
 		this.payment = payment;
 	}
 
-	public Car getCar() {
-		return car;
-	}
-
-	public void setCar(Car car) {
-		this.car = car;
-	}
-
 	@Override
 	public String toString() {
 		return "Appointment [appId=" + appId + ", appDate=" + appDate + ", appTime=" + appTime + ", billAmount="
-				+ billAmount + ", status=" + status + ", payment=" + payment + ", car=" + car + "]";
+				+ billAmount + ", status=" + status + ", payment=" + payment + "]";
 	}
 }

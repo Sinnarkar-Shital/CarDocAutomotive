@@ -15,12 +15,12 @@ public class AppointmentServiceImpl implements AppointmentService
 {
 	@Autowired
 	AppointmentDao aDao;
-	
+
 	@Override
 	public void addnewAppointment(Appointment a) {
 		aDao.save(a);
 	}
-	
+
 	@Override
 	public List<Appointment> getAllAppointments() {
 		return aDao.findAll();
@@ -29,7 +29,8 @@ public class AppointmentServiceImpl implements AppointmentService
 	@Override
 	public Appointment getById(long appId) {
 		Optional<Appointment> op=aDao.findById(appId);
-		return op.orElse(null);	}
+		return op.orElse(null);	
+	}
 
 	@Override
 	public int updateAppointment(Appointment a)
@@ -40,7 +41,6 @@ public class AppointmentServiceImpl implements AppointmentService
 			Appointment app = op.get();
 			app.setAppDate(a.getAppDate());
 			app.setAppTime(a.getAppTime());
-			app.setCar(a.getCar());
 			app.setPayment(a.getPayment());
 			app.setStatus(a.getStatus());
 			app.setBillAmount(a.getBillAmount());
@@ -54,5 +54,5 @@ public class AppointmentServiceImpl implements AppointmentService
 	public void deleteById(long appId) {
 		aDao.deleteById(appId);
 	}
-	
+
 }

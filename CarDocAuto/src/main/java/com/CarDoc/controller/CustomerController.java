@@ -30,7 +30,7 @@ public class CustomerController
 	@PostMapping("/customers")
 	public ResponseEntity<String> addCustomer(@RequestBody Customer cust) {
 		customerService.addnewCustomer(cust);
-		return new ResponseEntity("Data added successfully"+cust.getId(),HttpStatus.CREATED);
+		return new ResponseEntity("Data added successfully"+cust.getCustId(),HttpStatus.CREATED);
 	}
 
 	@GetMapping("/customers")
@@ -39,28 +39,28 @@ public class CustomerController
 		return ResponseEntity.ok(custlist);
 	}
 
-	@GetMapping("/customers/{cId}")
-	public ResponseEntity<Customer> displayById(@PathVariable long cId) {
-		Customer cust=customerService.getById(cId);
+	@GetMapping("/customers/{custId}")
+	public ResponseEntity<Customer> displayById(@PathVariable long custId) {
+		Customer cust=customerService.getById(custId);
 		if(cust!=null) {
 			return new ResponseEntity(cust,HttpStatus.OK);
 		}
 		return new ResponseEntity(HttpStatus.NOT_FOUND);
 	}
 
-	@PutMapping("/customers/{cId}")
+	@PutMapping("/customers/{custId}")
 	public ResponseEntity<String> updateCustomer(@RequestBody Customer cust) {
 		int n=customerService.updateCustomer(cust);
 		if(n>0)
-			return new ResponseEntity("Data added successfully"+cust.getId(),HttpStatus.CREATED);
+			return new ResponseEntity("Data added successfully"+cust.getCustId(),HttpStatus.CREATED);
 		else
 			return new ResponseEntity(HttpStatus.BAD_REQUEST);
 	}
 
-	@DeleteMapping("/customers/{cId}")
-	public ResponseEntity<String> deleteCustomer(@PathVariable long cId) {
-		customerService.deleteById(cId);
-		return new ResponseEntity("Data deleted successfully-->"+ cId,HttpStatus.OK);
+	@DeleteMapping("/customers/{custId}")
+	public ResponseEntity<String> deleteCustomer(@PathVariable long custId) {
+		customerService.deleteById(custId);
+		return new ResponseEntity("Data deleted successfully-->"+ custId,HttpStatus.OK);
 
 	}
 }

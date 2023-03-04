@@ -36,7 +36,7 @@ public class EmployeeServiceImpl implements EmployeeService
 
 	@Override
 	public int updateEmployee(Employee e) {
-		Optional<Employee> op=employeeDao.findById(e.getId());
+		Optional<Employee> op=employeeDao.findById(e.getEmpId());
 		if(op.isPresent())
 		{
 			Employee emp = op.get();

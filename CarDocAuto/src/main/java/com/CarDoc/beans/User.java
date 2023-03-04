@@ -1,48 +1,38 @@
 package com.CarDoc.beans;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-
-import lombok.Data;
 
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
 public class User 
 {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
+	private long userId;
 	private String pwd;
-	private String fName;
-	private String lName;
-	private String phoneNo;
 	private String email;
+	private String role;
 	
 	public User() {
 		super();
 	}
 
-	public User(String pwd, String fName, String lName, String phoneNo, String email) {
+	public User(long userId, String pwd, String email, String role) {
 		super();
+		this.userId = userId;
 		this.pwd = pwd;
-		this.fName = fName;
-		this.lName = lName;
-		this.phoneNo = phoneNo;
 		this.email = email;
+		this.role = role;
 	}
 
-	public long getId() {
-		return id;
+	public long getUserId() {
+		return userId;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setUserId(long userId) {
+		this.userId = userId;
 	}
 
 	public String getPwd() {
@@ -53,30 +43,6 @@ public class User
 		this.pwd = pwd;
 	}
 
-	public String getfName() {
-		return fName;
-	}
-
-	public void setfName(String fName) {
-		this.fName = fName;
-	}
-
-	public String getlName() {
-		return lName;
-	}
-
-	public void setlName(String lName) {
-		this.lName = lName;
-	}
-
-	public String getPhoneNo() {
-		return phoneNo;
-	}
-
-	public void setPhoneNo(String phoneNo) {
-		this.phoneNo = phoneNo;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -85,11 +51,16 @@ public class User
 		this.email = email;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", pwd=" + pwd + ", fName=" + fName + ", lName=" + lName + ", phoneNo=" + phoneNo
-				+ ", email=" + email + "]";
+	public String getRole() {
+		return role;
 	}
 
-	
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", pwd=" + pwd + ", email=" + email + ", role=" + role + "]";
+	}
 }
