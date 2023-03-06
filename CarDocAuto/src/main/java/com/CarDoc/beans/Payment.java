@@ -2,14 +2,10 @@ package com.CarDoc.beans;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import lombok.Data;
 
 @Entity
 public class Payment 
@@ -57,6 +53,6 @@ public class Payment
 
 	@Override
 	public String toString() {
-		return "Payment [pId=" + pId + ", payDate=" + payDate + ", amount=" + amount + "]";
+		return "Payment [pId=" + pId + ", payDate=" + payDate + ", amount=" + amount + ", app=" + "]";
 	}
 }

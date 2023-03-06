@@ -22,6 +22,10 @@ public class Car
 	private String fuel;
 	private String plateNo;
 	private int mfgYear;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 86eb109f795f1acc3e41f643f67ab9c3376b46b9
 	
 	public Car() {
 		super();
@@ -102,6 +106,6 @@ public class Car
 	@Override
 	public String toString() {
 		return "Car [carId=" + carId + ", brand=" + brand + ", model=" + model + ", fuel=" + fuel + ", plateNo="
-				+ plateNo + ", mfgYear=" + mfgYear + "]";
+				+ plateNo + ", mfgYear=" + mfgYear + ", customer=" + "]";
 	}
 }

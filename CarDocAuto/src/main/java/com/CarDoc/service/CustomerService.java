@@ -2,7 +2,6 @@ package com.CarDoc.service;
 
 import java.util.List;
 
-import com.CarDoc.beans.Car;
 import com.CarDoc.beans.Customer;
 
 public interface CustomerService 

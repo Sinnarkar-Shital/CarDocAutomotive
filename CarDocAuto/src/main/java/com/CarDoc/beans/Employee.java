@@ -2,10 +2,8 @@ package com.CarDoc.beans;
 
 import java.util.Date;
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+<<<<<<< HEAD
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +14,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
+=======
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+>>>>>>> 86eb109f795f1acc3e41f643f67ab9c3376b46b9
 
 @Entity
 public class Employee
@@ -26,8 +29,13 @@ public class Employee
 	private String pwd;
 	private String fName;
 	private String lName;
+<<<<<<< HEAD
 	private String email;
 	private String phoneNo;
+=======
+	private String phoneNo;
+	private String email;
+>>>>>>> 86eb109f795f1acc3e41f643f67ab9c3376b46b9
 	private double salary;
 	private Date hireDate;
 	private String designation;
@@ -36,15 +44,24 @@ public class Employee
 		super();
 	}
 
+<<<<<<< HEAD
 	public Employee(long empId, String pwd, String fName, String lName, String email, String phoneNo, double salary,
+=======
+	public Employee(long empId, String pwd, String fName, String lName, String phoneNo, String email, double salary,
+>>>>>>> 86eb109f795f1acc3e41f643f67ab9c3376b46b9
 			Date hireDate, String designation) {
 		super();
 		this.empId = empId;
 		this.pwd = pwd;
 		this.fName = fName;
 		this.lName = lName;
+<<<<<<< HEAD
 		this.email = email;
 		this.phoneNo = phoneNo;
+=======
+		this.phoneNo = phoneNo;
+		this.email = email;
+>>>>>>> 86eb109f795f1acc3e41f643f67ab9c3376b46b9
 		this.salary = salary;
 		this.hireDate = hireDate;
 		this.designation = designation;
@@ -82,6 +99,7 @@ public class Employee
 		this.lName = lName;
 	}
 
+<<<<<<< HEAD
 	public String getEmail() {
 		return email;
 	}
@@ -90,12 +108,25 @@ public class Employee
 		this.email = email;
 	}
 
+=======
+>>>>>>> 86eb109f795f1acc3e41f643f67ab9c3376b46b9
 	public String getPhoneNo() {
 		return phoneNo;
 	}
 
 	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
+<<<<<<< HEAD
+=======
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+>>>>>>> 86eb109f795f1acc3e41f643f67ab9c3376b46b9
 	}
 
 	public double getSalary() {
@@ -122,6 +153,7 @@ public class Employee
 		this.designation = designation;
 	}
 
+<<<<<<< HEAD
 
 	@Override
 	public String toString() {
@@ -129,4 +161,13 @@ public class Employee
 				+ email + ", phoneNo=" + phoneNo + ", salary=" + salary + ", hireDate=" + hireDate + ", designation="
 				+ designation+ "]";
 	}
+=======
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", pwd=" + pwd + ", fName=" + fName + ", lName=" + lName + ", phoneNo="
+				+ phoneNo + ", email=" + email + ", salary=" + salary + ", hireDate=" + hireDate + ", designation="
+				+ designation + "]";
+	}
+
+>>>>>>> 86eb109f795f1acc3e41f643f67ab9c3376b46b9
 }

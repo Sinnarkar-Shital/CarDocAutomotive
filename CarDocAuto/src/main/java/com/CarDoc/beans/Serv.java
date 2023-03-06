@@ -1,7 +1,5 @@
 package com.CarDoc.beans;
 
-import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -9,7 +7,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+<<<<<<< HEAD
 import javax.persistence.ManyToOne;
+=======
+>>>>>>> 86eb109f795f1acc3e41f643f67ab9c3376b46b9
 import javax.persistence.OneToOne;
 
 
@@ -21,7 +22,7 @@ public class Serv
 	private long sId;
 	private String name;
 	private double price;
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY,cascade=CascadeType.ALL)
 	@JoinColumn(name="empId")
 	private Employee e;
 	
