@@ -12,29 +12,25 @@ import javax.persistence.InheritanceType;
 import lombok.Data;
 
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
 public class User 
 {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
-	private String pwd;
-	private String fName;
-	private String lName;
-	private String phoneNo;
 	private String email;
+	private String pwd;
+	private String role;
 	
 	public User() {
 		super();
 	}
 
-	public User(String pwd, String fName, String lName, String phoneNo, String email) {
+	public User(long id, String email, String pwd, String role) {
 		super();
-		this.pwd = pwd;
-		this.fName = fName;
-		this.lName = lName;
-		this.phoneNo = phoneNo;
+		this.id = id;
 		this.email = email;
+		this.pwd = pwd;
+		this.role = role;
 	}
 
 	public long getId() {
@@ -45,38 +41,6 @@ public class User
 		this.id = id;
 	}
 
-	public String getPwd() {
-		return pwd;
-	}
-
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
-	}
-
-	public String getfName() {
-		return fName;
-	}
-
-	public void setfName(String fName) {
-		this.fName = fName;
-	}
-
-	public String getlName() {
-		return lName;
-	}
-
-	public void setlName(String lName) {
-		this.lName = lName;
-	}
-
-	public String getPhoneNo() {
-		return phoneNo;
-	}
-
-	public void setPhoneNo(String phoneNo) {
-		this.phoneNo = phoneNo;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -85,11 +49,24 @@ public class User
 		this.email = email;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", pwd=" + pwd + ", fName=" + fName + ", lName=" + lName + ", phoneNo=" + phoneNo
-				+ ", email=" + email + "]";
+	public String getPwd() {
+		return pwd;
 	}
 
-	
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", email=" + email + ", pwd=" + pwd + ", role=" + role + "]";
+	}
 }

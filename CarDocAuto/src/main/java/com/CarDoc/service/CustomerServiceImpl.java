@@ -23,7 +23,7 @@ public class CustomerServiceImpl implements CustomerService
 
 	@Override
 	public int updateCustomer(Customer cust) {
-		Optional<Customer> op=customerDao.findById(cust.getId());
+		Optional<Customer> op=customerDao.findById(cust.getCustId());
 		if(op.isPresent())
 		{
 			Customer c = op.get();
@@ -32,7 +32,7 @@ public class CustomerServiceImpl implements CustomerService
 			c.setEmail(cust.getEmail());
 			c.setPhoneNo(cust.getPhoneNo());
 			c.setPwd(cust.getPwd());
-			c.setCar(cust.getCar());
+			c.setCars(cust.getCars());
 			customerDao.save(c);
 			return 1;
 		}

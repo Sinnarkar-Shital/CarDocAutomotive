@@ -29,7 +29,7 @@ public class EmployeeController {
 	@PostMapping("/employees")
 	public ResponseEntity<String> addEmployee(@RequestBody Employee e) {
 		employeeService.addnewEmployee(e);
-		return new ResponseEntity("Data added successfully"+e.getId(),HttpStatus.CREATED);
+		return new ResponseEntity("Data added successfully"+e.getEmpId(),HttpStatus.CREATED);
 	}
 
 	@GetMapping("/employees")
@@ -52,7 +52,7 @@ public class EmployeeController {
 	public ResponseEntity<String> updateEmployee(@RequestBody Employee e) {
 		int n=employeeService.updateEmployee(e);
 		if(n>0)
-			return new ResponseEntity("Data added successfully"+e.getId(),HttpStatus.CREATED);
+			return new ResponseEntity("Data added successfully"+e.getEmpId(),HttpStatus.CREATED);
 		else
 			return new ResponseEntity(HttpStatus.BAD_REQUEST);
 	}
